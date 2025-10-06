@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Goodlife Enterprises Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* --- Lightbox + Animation --- */
+    .projects-grid {
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .project {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Modal overlay */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .modal-content h3 {
+      color: #0b2540;
+      margin-top: 5px;
+    }
+
+    .close {
+      position: absolute;
+      top: 8px;
+      right: 14px;
+      font-size: 28px;
+      color: #333;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close:hover {
+      color: #d19f00;
+    }
+
+    @media (max-width: 600px) {
+      .modal-content {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">GOODLIFE<br><small class="tagline">Enterprises Ltd</small></div>
+    </div>
+    <nav aria-label="Main navigation">
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+      <ul id="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div><a class="cta-primary" href="contact.html">Get a Quote</a></div>
+  </div>
+</header>
+
+<main>
+  <section class="container">
+    <div class="section-title">
+      <div class="eyebrow">PROJECTS</div>
+      <h2 class="h2">Selected Works</h2>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project" onclick="openModal('modal1')">
+        <img src="assets/project1.png" alt="Residential Estate">
+        <div class="meta">Residential Estate — Nairobi</div>
+      </article>
+      <article class="project" onclick="openModal('modal2')">
+        <img src="assets/project2.png" alt="Office Complex">
+        <div class="meta">Office Complex — Westlands</div>
+      </article>
+      <article class="project" onclick="openModal('modal3')">
+        <img src="assets/project3.png" alt="Road Rehab">
+        <div class="meta">Road Rehabilitation — County Works</div>
+      </article>
+    </div>
+
+    <div style="margin-top:20px">
+      <h3>Project: Residential Estate</h3>
+      <p>Construction of a 20-unit modern housing estate featuring energy-efficient design, quality finishes and secure perimeter works.</p>
+
+      <h3>Project: Office Complex</h3>
+      <p>Design and build of a three-storey office complex with parking, reinforced structural works and modern façades.</p>
+
+      <h3>Project: Road Rehabilitation</h3>
+      <p>County road resurfacing including drainage upgrades, earthworks and traffic management coordination.</p>
+    </div>
+  </section>
+</main>
+
+<!-- Modals -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <img src="assets/project1.png" alt="">
+    <h3>Residential Estate — Nairobi</h3>
+    <p>Construction of a 20-unit modern housing estate featuring energy-efficient design, quality finishes and secure perimeter works.</p>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <img src="assets/project2.png" alt="">
+    <h3>Office Complex — Westlands</h3>
+    <p>Design and build of a three-storey office complex with parking, reinforced structural works, and modern façades.</p>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <img src="assets/project3.png" alt="">
+    <h3>Road Rehabilitation — County Works</h3>
+    <p>Upgrading and resurfacing of county access roads including drainage systems and safety installations.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="logo" style="color:#fff">GOODLIFE</div>
+      <div style="opacity:0.85;margin-top:8px;max-width:340px">Building quality homes and infrastructure across Nairobi and beyond.</div>
+    </div>
+    <div style="flex:1">
+      <h4 style="margin-top:0">Navigate</h4>
+      <nav aria-label="Footer nav">
+        <a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="projects.html">Projects</a>
+      </nav>
+    </div>
+    <div style="width:260px">
+      <h4 style="margin-top:0">Contact</h4>
+      <div>P.O. Box 65188-00618<br>Ruaraka, Nairobi</div>
+      <div style="margin-top:6px">Phone: <a href="tel:+254722141595">+254 722 141595</a></div>
+      <div style="margin-top:6px">Email: <a href="mailto:goodlifeenterprises@yahoo.com">goodlifeenterprises@yahoo.com</a></div>
+    </div>
+  </div>
+  <div style="text-align:center;padding:12px 0;border-top:1px solid rgba(255,255,255,0.06);opacity:0.9">© Goodlife Enterprises Ltd. All rights reserved.</div>
+</footer>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(m => {
+    if (event.target === m) m.style.display = "none";
+  });
+}
+</script>
+
+<script src="scripts.js"></script>
+</body>
+</html>
