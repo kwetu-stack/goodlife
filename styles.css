@@ -277,3 +277,24 @@ footer a:hover {
     width: 100%;
   }
 }
+footer {
+  background: #0b2540; /* deep blue */
+  color: #fff;
+  width: 100%;
+  padding: 40px 0;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
