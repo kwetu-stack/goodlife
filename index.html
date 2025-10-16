@@ -6,13 +6,73 @@
   <title>Goodlife Enterprises Ltd — Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* === LOGO FIX & GL ICON === */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .logo-icon {
+      background: var(--gold, #d4af37);
+      color: var(--navy, #002b5b);
+      font-weight: 800;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .logo-text {
+      line-height: 1.1;
+    }
+
+    .logo-main {
+      color: var(--navy, #002b5b);
+    }
+
+    .logo-accent {
+      color: var(--gold, #d4af37);
+    }
+
+    .tagline {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.75rem;
+      color: #666;
+      letter-spacing: 0.5px;
+    }
+
+    header {
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    header .container.nav {
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="container nav">
     <div class="brand">
-      <div class="logo">GOODLIFE<br><small class="tagline">Enterprises Ltd</small></div>
+      <div class="logo">
+        <div class="logo-icon">GL</div>
+        <div class="logo-text">
+          <span class="logo-main">GOOD</span><span class="logo-accent">LIFE</span><br>
+          <small class="tagline">Enterprises Ltd</small>
+        </div>
+      </div>
     </div>
     <nav aria-label="Main navigation">
       <button class="mobile-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
@@ -27,6 +87,7 @@
     <div><a class="cta-primary" href="contact.html">Get a Quote</a></div>
   </div>
 </header>
+
 
 <main>
   <!-- HERO SLIDESHOW SECTION -->
