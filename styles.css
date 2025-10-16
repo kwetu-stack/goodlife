@@ -465,3 +465,37 @@ nav[aria-expanded="true"] ul { display: block; }
     padding: 8px 0;
   }
 }
+/* Mobile Navigation */
+.mobile-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: inline-block;
+  }
+  #main-menu {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 12px 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  #main-menu.open {
+    display: flex;
+  }
+  #main-menu li a {
+    display: block;
+    padding: 8px 0;
+  }
+}
