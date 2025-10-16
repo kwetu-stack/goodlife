@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Goodlife Enterprises Ltd</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -17,7 +18,7 @@
       <button class="mobile-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
       <ul id="main-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -30,25 +31,71 @@
 <main>
   <section style="padding:40px 0;background:#fff">
     <div class="container">
-      <div class="section-title"><div class="eyebrow">ABOUT</div><h2 class="h2">Goodlife Enterprises Ltd</h2></div>
+      <div class="section-title">
+        <div class="eyebrow">ABOUT</div>
+        <h2 class="h2">Goodlife Enterprises Ltd</h2>
+      </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center">
-        <div><img src="assets/about-office.png" alt="Office" style="width:100%;border-radius:10px;object-fit:cover;display:block;height:320px"></div>
+        <div>
+          <img src="assets/about-office.png" alt="Office" style="width:100%;border-radius:10px;object-fit:cover;display:block;height:320px">
+        </div>
         <div>
           <p><strong>Goodlife Enterprises Ltd</strong> is a full-service construction company based in Ruaraka, Nairobi. We specialise in residential, commercial and civil engineering projects — delivering end-to-end solutions from design and planning to construction and handover.</p>
-          <h3>Vision</h3><p>To be Kenya’s most trusted and innovative construction company, delivering lasting value through quality and integrity.</p>
-          <h3>Mission</h3><p>To provide top-tier construction solutions through skilled workmanship, modern technology, and customer-focused service — building spaces that inspire progress and sustainability.</p>
-          <h3>Core Values</h3><ul><li>Integrity</li><li>Professionalism</li><li>Quality</li><li>Safety</li><li>Innovation</li></ul>
+
+          <h3>Vision</h3>
+          <p>To be Kenya’s most trusted and innovative construction company, delivering lasting value through quality and integrity.</p>
+
+          <h3>Mission</h3>
+          <p>To provide top-tier construction solutions through skilled workmanship, modern technology, and customer-focused service — building spaces that inspire progress and sustainability.</p>
+
+          <h3>Core Values</h3>
+          <ul>
+            <li>Integrity</li>
+            <li>Professionalism</li>
+            <li>Quality</li>
+            <li>Safety</li>
+            <li>Innovation</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 </main>
+
 <footer>
   <div class="container footer-grid">
-    <div><div class="logo" style="color:#fff">GOODLIFE</div><div style="opacity:0.85;margin-top:8px;max-width:340px">Building quality homes and infrastructure across Nairobi and beyond.</div></div>
-    <div style="flex:1"><h4 style="margin-top:0">Navigate</h4><nav aria-label="Footer nav"><a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="projects.html">Projects</a></nav></div>
-    <div style="width:260px"><h4 style="margin-top:0">Contact</h4><div>P.O. Box 65188-00618<br>Ruaraka, Nairobi</div><div style="margin-top:6px">Phone: <a href="tel:+254722141595">+254 722 141595</a></div><div style="margin-top:6px">Email: <a href="mailto:goodlifeenterprises@yahoo.com">goodlifeenterprises@yahoo.com</a></div></div>
+    <div>
+      <div class="logo" style="color:#fff">GOODLIFE</div>
+      <div style="opacity:0.85;margin-top:8px;max-width:340px">
+        Building quality homes and infrastructure across Nairobi and beyond.
+      </div>
+    </div>
+    <div style="flex:1">
+      <h4 style="margin-top:0">Navigate</h4>
+      <nav aria-label="Footer nav">
+        <a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="projects.html">Projects</a>
+      </nav>
+    </div>
+    <div style="width:260px">
+      <h4 style="margin-top:0">Contact</h4>
+      <div>P.O. Box 65188-00618<br>Ruaraka, Nairobi</div>
+      <div style="margin-top:6px">
+        Phone:
+        <a href="tel:+254722141595">+254 722 141595</a> /
+        <a href="tel:+254754126129">+254 754 126129</a> /
+        <a href="tel:+254735424187">+254 735 424187</a>
+      </div>
+      <div style="margin-top:6px">
+        Email:
+        <a href="mailto:goodlifeenterprises@yahoo.com">goodlifeenterprises@yahoo.com</a>
+      </div>
+    </div>
   </div>
-  <div style="text-align:center;padding:12px 0;border-top:1px solid rgba(255,255,255,0.06);opacity:0.9">© Goodlife Enterprises Ltd. All rights reserved.</div>
+  <div style="text-align:center;padding:12px 0;border-top:1px solid rgba(255,255,255,0.06);opacity:0.9">
+    © Goodlife Enterprises Ltd. All rights reserved.
+  </div>
 </footer>
-<script src="scripts.js"></script></body></html>
+
+<script src="scripts.js"></script>
+</body>
+</html>
