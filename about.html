@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="container nav">
     <!-- Logo -->
@@ -27,7 +28,7 @@
       <button class="mobile-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
       <ul id="main-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="renovations.html">Renovations</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -40,41 +41,71 @@
   </div>
 </header>
 
+<!-- ===== HERO ===== -->
+<section class="page-hero" style="background-image:url('assets/background3.jpg')">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1>About Us</h1>
+  </div>
+</section>
 
+<!-- ===== MAIN CONTENT ===== -->
 <main>
-  <section style="padding:40px 0;background:#fff">
-    <div class="container">
-      <div class="section-title">
-        <div class="eyebrow">ABOUT</div>
-        <h2 class="h2">Goodlife Enterprises Ltd</h2>
+  <section class="container">
+    <div class="section-title">
+      <div class="eyebrow">ABOUT</div>
+      <h2 class="h2">Goodlife Enterprises Ltd</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center">
+      <div>
+        <img src="assets/about-office.png" alt="Goodlife Enterprises Office" style="width:100%;border-radius:10px;object-fit:cover;display:block;height:320px">
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center">
-        <div>
-          <img src="assets/about-office.png" alt="Office" style="width:100%;border-radius:10px;object-fit:cover;display:block;height:320px">
-        </div>
-        <div>
-          <p><strong>Goodlife Enterprises Ltd</strong> is a full-service construction company based in Ruaraka, Nairobi. We specialise in residential, commercial and civil engineering projects — delivering end-to-end solutions from design and planning to construction and handover.</p>
+      <div>
+        <p><strong>Goodlife Enterprises Ltd</strong> is a full-service construction company based in Ruaraka, Nairobi. We specialise in residential, commercial and civil engineering projects — delivering end-to-end solutions from design and planning to construction and handover.</p>
 
-          <h3>Vision</h3>
-          <p>To be Kenya’s most trusted and innovative construction company, delivering lasting value through quality and integrity.</p>
+        <h3>Vision</h3>
+        <p>To be Kenya’s most trusted and innovative construction company, delivering lasting value through quality and integrity.</p>
 
-          <h3>Mission</h3>
-          <p>To provide top-tier construction solutions through skilled workmanship, modern technology, and customer-focused service — building spaces that inspire progress and sustainability.</p>
+        <h3>Mission</h3>
+        <p>To provide top-tier construction solutions through skilled workmanship, modern technology, and customer-focused service — building spaces that inspire progress and sustainability.</p>
 
-          <h3>Core Values</h3>
-          <ul>
-            <li>Integrity</li>
-            <li>Professionalism</li>
-            <li>Quality</li>
-            <li>Safety</li>
-            <li>Innovation</li>
-          </ul>
-        </div>
+        <h3>Core Values</h3>
+        <ul>
+          <li>Integrity</li>
+          <li>Professionalism</li>
+          <li>Quality</li>
+          <li>Safety</li>
+          <li>Innovation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS SECTION ===== -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="250">0</span><span class="plus">+</span>
+        <p>Projects</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100">0</span><span class="plus">+</span>
+        <p>Clients</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="25">0</span><span class="plus">+</span>
+        <p>Specialists</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="10">0</span><span class="plus">+</span>
+        <p>Awards</p>
       </div>
     </div>
   </section>
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container footer-grid">
     <div>
@@ -86,7 +117,9 @@
     <div style="flex:1">
       <h4 style="margin-top:0">Navigate</h4>
       <nav aria-label="Footer nav">
-        <a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="projects.html">Projects</a>
+        <a href="index.html">Home</a> • 
+        <a href="services.html">Services</a> • 
+        <a href="projects.html">Projects</a>
       </nav>
     </div>
     <div style="width:260px">
@@ -100,8 +133,10 @@
       </div>
       <div style="margin-top:6px">
         Email:
-         <div style="margin-top:6px">Email: <a href="mailto:goodlifenterprises@yahoo.com">goodlifenterprises@yahoo.com<br>
-      goodlifeenterprises05@gmail.com</a></div>
+        <div style="margin-top:6px">
+          <a href="mailto:goodlifenterprises@yahoo.com">goodlifenterprises@yahoo.com</a><br>
+          <a href="mailto:goodlifeenterprises05@gmail.com">goodlifeenterprises05@gmail.com</a>
+        </div>
       </div>
     </div>
   </div>

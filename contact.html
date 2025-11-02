@@ -31,7 +31,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="renovations.html">Renovations</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
 
@@ -40,6 +40,12 @@
   </div>
 </header>
 
+<section class="page-hero" style="background-image:url('assets/background5.jpg')">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1>Contact</h1>
+  </div>
+</section>
 
 <main>
   <section class="container contact-section">
@@ -84,8 +90,10 @@
 
         <p>
           <strong>Email:</strong><br>
-           <div style="margin-top:6px">Email: <a href="mailto:goodlifenterprises@yahoo.com">goodlifenterprises@yahoo.com<br>
-      goodlifeenterprises05@gmail.com</a></div>
+          <div style="margin-top:6px">
+            <a href="mailto:goodlifenterprises@yahoo.com">goodlifenterprises@yahoo.com</a><br>
+            <a href="mailto:goodlifeenterprises05@gmail.com">goodlifeenterprises05@gmail.com</a>
+          </div>
         </p>
 
         <h4>Map</h4>
@@ -93,6 +101,28 @@
           Google Map placeholder
         </div>
       </aside>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat">
+        <div class="number" data-target="250">0</div>
+        <p>Projects</p>
+      </div>
+      <div class="stat">
+        <div class="number" data-target="100">0</div>
+        <p>Clients</p>
+      </div>
+      <div class="stat">
+        <div class="number" data-target="25">0</div>
+        <p>Specialists</p>
+      </div>
+      <div class="stat">
+        <div class="number" data-target="10">0</div>
+        <p>Awards</p>
+      </div>
     </div>
   </section>
 </main>
@@ -108,7 +138,9 @@
     <div style="flex:1">
       <h4 style="margin-top:0">Navigate</h4>
       <nav aria-label="Footer nav">
-        <a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="projects.html">Projects</a>
+        <a href="index.html">Home</a> • 
+        <a href="services.html">Services</a> • 
+        <a href="projects.html">Projects</a>
       </nav>
     </div>
     <div style="width:260px">
@@ -132,6 +164,7 @@
 </footer>
 
 <script>
+// Contact form
 document.getElementById("contactForm").addEventListener("submit", async function(e) {
   e.preventDefault();
   const form = e.target;
@@ -158,12 +191,37 @@ document.getElementById("contactForm").addEventListener("submit", async function
     status.style.color = "#b00020";
   }
 });
-</script>
-<script>
-  // Contact form script (keep as-is)
-  document.getElementById("contactForm").addEventListener("submit", async function(e) {
-    
+
+// Counter Animation
+const counters = document.querySelectorAll('.number');
+const speed = 200;
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const update = () => {
+      const value = +counter.innerText;
+      const increment = target / speed;
+      if (value < target) {
+        counter.innerText = Math.ceil(value + increment);
+        setTimeout(update, 25);
+      } else {
+        counter.innerText = target + '+';
+      }
+    };
+    update();
   });
+};
+
+let animated = false;
+window.addEventListener('scroll', () => {
+  const section = document.querySelector('.stats-section');
+  const rect = section.getBoundingClientRect();
+  if (!animated && rect.top < window.innerHeight) {
+    animateCounters();
+    animated = true;
+  }
+});
 </script>
 
 <script src="scripts.js"></script>

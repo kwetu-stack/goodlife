@@ -6,63 +6,10 @@
   <title>Goodlife Enterprises Ltd — Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* === LOGO FIX & GL ICON === */
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 1.5rem;
-      line-height: 1.2;
-    }
-
-    .logo-icon {
-      background: var(--gold, #d4af37);
-      color: var(--navy, #002b5b);
-      font-weight: 800;
-      border-radius: 50%;
-      width: 38px;
-      height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-    }
-
-    .logo-text {
-      line-height: 1.1;
-    }
-
-    .logo-main {
-      color: var(--navy, #002b5b);
-    }
-
-    .logo-accent {
-      color: var(--gold, #d4af37);
-    }
-
-    .tagline {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 0.75rem;
-      color: #666;
-      letter-spacing: 0.5px;
-    }
-
-    header {
-      background: #fff;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-
-    header .container.nav {
-      align-items: center;
-    }
-  </style>
 </head>
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="container nav">
     <!-- Logo -->
@@ -80,7 +27,7 @@
     <nav aria-label="Main navigation">
       <button class="mobile-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
       <ul id="main-menu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="renovations.html">Renovations</a></li>
@@ -94,91 +41,154 @@
   </div>
 </header>
 
+<!-- ===== HERO SECTION ===== -->
+<section class="page-hero" style="background-image:url('assets/slide1.png')">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1>Building Tomorrow’s Landmarks — Today</h1>
+    <p>Residential • Commercial • Civil Construction — delivering quality, safety, and value across Kenya.</p>
+    <div class="hero-buttons">
+      <a class="cta-primary" href="projects.html">View Our Projects</a>
+      <a class="cta-outline" href="contact.html">Contact Us</a>
+    </div>
+  </div>
+</section>
 
-
+<!-- ===== MAIN CONTENT ===== -->
 <main>
-  <!-- HERO SLIDESHOW SECTION -->
-  <section class="hero">
-    <div class="hero__slideshow">
-      <div class="slide active" style="background-image:url('assets/slide1.png');"></div>
-      <div class="slide" style="background-image:url('assets/slide2.png');"></div>
-      <div class="slide" style="background-image:url('assets/slide3.png');"></div>
-    </div>
-    <div class="hero__overlay" aria-hidden="true"></div>
-    <div class="container hero__content">
-      <h1>BUILDING TOMORROW'S LANDMARKS — TODAY</h1>
-      <p>Residential | Commercial | Civil Construction — delivering quality, safety and value across Nairobi and Kenya.</p>
-      <div class="hero-buttons">
-        <a class="btn btn--primary" href="projects.html">View Our Projects</a>
-        <a class="btn" href="contact.html" style="border:1px solid rgba(255,255,255,0.22);background:transparent;color:#fff">Contact Us</a>
-      </div>
-    </div>
-  </section>
 
   <!-- ABOUT PREVIEW -->
-  <section id="about-preview">
-    <div class="container">
-      <div class="section-title"><div class="eyebrow">WHO WE ARE</div><h2 class="h2">Goodlife Enterprises Ltd</h2></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center">
-        <div><img src="assets/about-office.png" alt="Goodlife team or site" style="width:100%;border-radius:10px;object-fit:cover;display:block;height:320px"></div>
-        <div>
-          <p>Goodlife Enterprises Ltd is a full-service construction firm based in Ruaraka, Nairobi. We deliver turn-key residential, commercial, and civil engineering projects with a focus on quality workmanship, safety and timely delivery.</p>
-          <p class="text-muted">Our team combines practical experience with modern construction techniques to deliver projects that stand the test of time.</p>
-          <p><a class="btn" href="about.html" style="border:1px solid var(--navy);background:#fff;color:var(--navy)">Learn More About Us</a></p>
-        </div>
+  <section class="container">
+    <div class="section-title">
+      <div class="eyebrow">WHO WE ARE</div>
+      <h2 class="h2">Goodlife Enterprises Ltd</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center">
+      <div>
+        <img src="assets/about-office.png" alt="Goodlife Enterprises Ltd team" style="width:100%;border-radius:10px;object-fit:cover;display:block;height:320px">
+      </div>
+      <div>
+        <p>Goodlife Enterprises Ltd is a full-service construction company based in Ruaraka, Nairobi. We handle residential, commercial, and civil engineering projects with a focus on excellence, safety, and timely delivery.</p>
+        <p>Our team combines experience, innovation, and integrity to deliver solutions that meet international construction standards.</p>
+        <p><a class="btn" href="about.html" style="border:1px solid var(--navy);background:#fff;color:var(--navy)">Learn More</a></p>
       </div>
     </div>
   </section>
 
   <!-- SERVICES PREVIEW -->
-  <section id="services-preview">
-    <div class="container">
-      <div class="section-title"><div class="eyebrow">SERVICES</div><h2 class="h2">What We Do</h2></div>
-      <div class="services">
-        <article class="card"><div aria-hidden="true">🏠</div><h3>Residential Construction</h3><p>Design and build of modern homes, housing estates and apartments — from foundations to finishes.</p></article>
-        <article class="card"><div aria-hidden="true">🏢</div><h3>Commercial Projects</h3><p>Office buildings, retail spaces and mixed-use developments with an emphasis on efficiency and durability.</p></article>
-        <article class="card"><div aria-hidden="true">🚧</div><h3>Civil Engineering</h3><p>Roads, drainage, earthworks and infrastructure projects executed with safety and compliance.</p></article>
-      </div>
+  <section class="container">
+    <div class="section-title">
+      <div class="eyebrow">SERVICES</div>
+      <h2 class="h2">What We Do</h2>
+    </div>
+
+    <div class="services" style="margin-bottom:18px">
+      <article class="card">
+        <div aria-hidden="true">🏠</div>
+        <h3>Residential Construction</h3>
+        <p>Design and build of modern homes, housing estates and apartments — from foundations to finishes.</p>
+      </article>
+
+      <article class="card">
+        <div aria-hidden="true">🏢</div>
+        <h3>Commercial Projects</h3>
+        <p>Office buildings, retail spaces and mixed-use developments built with efficiency and durability.</p>
+      </article>
+
+      <article class="card">
+        <div aria-hidden="true">🚧</div>
+        <h3>Civil Engineering</h3>
+        <p>Roads, drainage, earthworks and infrastructure projects executed with compliance and precision.</p>
+      </article>
     </div>
   </section>
 
   <!-- PROJECTS PREVIEW -->
-  <section id="projects-preview">
-    <div class="container">
-      <div class="section-title"><div class="eyebrow">PORTFOLIO</div><h2 class="h2">Recent Projects</h2></div>
-      <div class="projects-grid">
-        <a class="project" href="projects.html" aria-label="Project: Residential Estate"><img src="assets/project1.png" alt="Residential Estate"><div class="meta">Residential Estate — Nairobi</div></a>
-        <a class="project" href="projects.html" aria-label="Project: Office Complex"><img src="assets/project2.png" alt="Office Complex"><div class="meta">Office Complex — Westlands</div></a>
-        <a class="project" href="projects.html" aria-label="Project: Road Rehabilitation"><img src="assets/project3.png" alt="Road Rehabilitation"><div class="meta">Road Rehabilitation — County Works</div></a>
+  <section class="container">
+    <div class="section-title">
+      <div class="eyebrow">PORTFOLIO</div>
+      <h2 class="h2">Recent Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+      <a class="project" href="projects.html">
+        <img src="assets/project1.png" alt="Residential Estate — Nairobi">
+        <div class="meta">Residential Estate — Nairobi</div>
+      </a>
+      <a class="project" href="projects.html">
+        <img src="assets/project2.png" alt="Office Complex — Westlands">
+        <div class="meta">Office Complex — Westlands</div>
+      </a>
+      <a class="project" href="projects.html">
+        <img src="assets/project3.png" alt="Road Rehabilitation — County Works">
+        <div class="meta">Road Rehabilitation — County Works</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== STATS SECTION (MATCHING SERVICES PAGE) ===== -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="250">0</span><span class="plus">+</span>
+        <p>Projects</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100">0</span><span class="plus">+</span>
+        <p>Clients</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="25">0</span><span class="plus">+</span>
+        <p>Specialists</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="10">0</span><span class="plus">+</span>
+        <p>Awards</p>
       </div>
     </div>
   </section>
 
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container footer-grid">
     <div>
       <div class="logo" style="color:#fff">GOODLIFE</div>
-      <div style="opacity:0.85;margin-top:8px;max-width:340px">Building quality homes and infrastructure across Nairobi and beyond.</div>
+      <div style="opacity:0.85;margin-top:8px;max-width:340px">
+        Building quality homes and infrastructure across Nairobi and beyond.
+      </div>
     </div>
     <div style="flex:1">
       <h4 style="margin-top:0">Navigate</h4>
-      <nav aria-label="Footer nav"><a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="projects.html">Projects</a></nav>
+      <nav aria-label="Footer nav">
+        <a href="index.html">Home</a> • 
+        <a href="services.html">Services</a> • 
+        <a href="projects.html">Projects</a>
+      </nav>
     </div>
     <div style="width:260px">
       <h4 style="margin-top:0">Contact</h4>
       <div>P.O. Box 65188-00618<br>Ruaraka, Nairobi</div>
-      <div style="margin-top:6px">Phone: 
-        <a href="tel:+254754126129">+254 754 126129</a> <br>
-        <a href="tel:+254735424187">+254 735 424187</a> <br>
-        <a href="tel:+254722141595">+254 722 141595</a>
+      <div style="margin-top:6px">
+        Phone:
+        <a href="tel:+254722141595">+254 722 141595</a> /
+        <a href="tel:+254754126129">+254 754 126129</a> /
+        <a href="tel:+254735424187">+254 735 424187</a>
       </div>
-      <div style="margin-top:6px">Email: <a href="mailto:goodlifenterprises@yahoo.com">goodlifenterprises@yahoo.com<br>
-      goodlifeenterprises05@gmail.com</a></div>
+      <div style="margin-top:6px">
+        Email:
+        <div style="margin-top:6px">
+          <a href="mailto:goodlifenterprises@yahoo.com">goodlifenterprises@yahoo.com</a><br>
+          <a href="mailto:goodlifeenterprises05@gmail.com">goodlifeenterprises05@gmail.com</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div style="text-align:center;padding:12px 0;border-top:1px solid rgba(255,255,255,0.06);opacity:0.9">© Goodlife Enterprises Ltd. All rights reserved.</div>
+  <div style="text-align:center;padding:12px 0;border-top:1px solid rgba(255,255,255,0.06);opacity:0.9">
+    © Goodlife Enterprises Ltd. All rights reserved.
+  </div>
 </footer>
 
 <script src="scripts.js"></script>
