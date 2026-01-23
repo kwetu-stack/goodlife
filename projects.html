@@ -90,7 +90,8 @@
       </div>
     </div>
 
-    <nav>
+    <nav aria-label="Main navigation">
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
       <ul id="main-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -108,6 +109,7 @@
 <section class="page-hero" style="background-image:url('assets/background4.jpg')">
   <div class="overlay"></div>
   <div class="hero-text">
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
     <h1>Project Experience</h1>
     <p>Residential, commercial, and civil works delivered across diverse environments.</p>
   </div>
@@ -282,5 +284,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script src="scripts.js"></script>
 </body>
 </html>
