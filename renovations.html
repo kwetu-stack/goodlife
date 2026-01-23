@@ -4,54 +4,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Renovations — Goodlife Enterprises Ltd</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
   <style>
-    /* Gallery Styles */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 24px;
     }
+
     .project {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
       background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
+
     .project img {
       width: 100%;
       height: 220px;
       object-fit: cover;
-      transition: transform 0.3s ease;
       display: block;
     }
-    .project .meta {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
+
+    .project-details {
+      padding: 16px 18px 18px;
+    }
+
+    .project-details h4 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      color: #0b2540;
+    }
+
+    .project-details ul {
+      margin: 0;
+      padding-left: 18px;
       font-size: 0.9rem;
-      padding: 5px 10px;
-      border-radius: 4px;
-    }
-    .project:hover img {
-      transform: scale(1.05);
-    }
-    .project:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      line-height: 1.5;
+      color: #444;
     }
   </style>
 </head>
+
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
   <div class="container nav">
-    <!-- Logo -->
     <div class="brand">
       <div class="logo">
         <div class="logo-icon">GL</div>
@@ -62,9 +63,8 @@
       </div>
     </div>
 
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
-      <button class="mobile-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <nav>
+      <button class="mobile-toggle" aria-expanded="false">☰</button>
       <ul id="main-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -75,12 +75,10 @@
       </ul>
     </nav>
 
-    <!-- CTA -->
-    <div><a class="cta-primary" href="contact.html">Get a Quote</a></div>
+    <a class="cta-primary" href="contact.html">Get a Quote</a>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
 <section class="page-hero" style="background-image:url('assets/background2.jpg')">
   <div class="overlay"></div>
   <div class="hero-text">
@@ -88,84 +86,150 @@
   </div>
 </section>
 
-<!-- ===== MAIN CONTENT ===== -->
 <main>
-  <!-- Renovation Services -->
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <div class="eyebrow">WHAT WE DO</div>
-        <h2 class="h2">Expert Renovation Services</h2>
-      </div>
 
-      <div class="services">
-        <article class="card">
-          <h3>Residential Renovations</h3>
-          <p>Upgrade kitchens, bathrooms, and living spaces with our modern designs and professional finishing.</p>
-        </article>
-
-        <article class="card">
-          <h3>Office & Commercial Spaces</h3>
-          <p>We transform business spaces into efficient, beautiful, and productive environments that support your goals.</p>
-        </article>
-
-        <article class="card">
-          <h3>Full Property Makeovers</h3>
-          <p>From complete demolitions to total redesigns, our team brings your vision to life with precision and care.</p>
-        </article>
-      </div>
+<section>
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">RENOVATIONS</div>
+      <h2 class="h2">Building Renovation & Refurbishment Works</h2>
     </div>
-  </section>
 
-  <!-- Gallery Section -->
-  <section style="background:#f6f7f9;padding:60px 0;">
-    <div class="container">
-      <div class="section-title">
-        <div class="eyebrow">PROJECT GALLERY</div>
-        <h2 class="h2">Recent Renovation Projects</h2>
-      </div>
+    <div class="services">
+      <article class="card">
+        <h3>Residential Renovations</h3>
+        <p>
+          Renovation works for occupied and unoccupied homes including kitchens, bathrooms,
+          living areas, ceilings, finishes, and internal modifications.
+        </p>
+        <p>
+          Works are planned and sequenced to minimise disruption while maintaining safety,
+          quality, and structural integrity.
+        </p>
+      </article>
 
-      <div class="projects-grid">
-        <div class="project">
-          <img src="assets/reno1.jpg" alt="Modern kitchen renovation">
-          <div class="meta">Office Remodel</div>
-        </div>
-        <div class="project">
-          <img src="assets/reno2.jpg" alt="Bathroom renovation">
-          <div class="meta">Interior Upgrade</div>
-        </div>
-        <div class="project">
-          <img src="assets/reno3.jpg" alt="Office remodel">
-          <div class="meta">Kitchen Remodel</div>
-        </div>
-      </div>
+      <article class="card">
+        <h3>Office & Commercial Renovations</h3>
+        <p>
+          Reconfiguration and upgrading of office and commercial interiors to improve workflow,
+          compliance, and long-term durability.
+        </p>
+        <p>
+          Includes partitioning, coordinated services, finishes, and controlled execution
+          in live operational environments.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Full Property Refurbishment</h3>
+        <p>
+          Comprehensive refurbishment projects involving selective demolition,
+          structural strengthening, and modernisation of existing buildings.
+        </p>
+        <p>
+          Each project begins with assessment of existing conditions to guide safe execution.
+        </p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Stats Section (same as services/about) -->
-  <section class="stats-section">
-    <div class="container stats-grid">
-      <div class="stat-item">
-        <span class="stat-number" data-target="250">0</span><span class="plus">+</span>
-        <p>Projects</p>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="100">0</span><span class="plus">+</span>
-        <p>Clients</p>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="25">0</span><span class="plus">+</span>
-        <p>Specialists</p>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="10">0</span><span class="plus">+</span>
-        <p>Awards</p>
-      </div>
+<section style="background:#f6f7f9;padding:60px 0;">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">RENOVATION WORKS</div>
+      <h2 class="h2">Selected Renovation Projects</h2>
     </div>
-  </section>
+
+    <div class="projects-grid">
+
+      <div class="project">
+        <img src="assets/reno1.jpg" alt="">
+        <div class="project-details">
+          <h4>Office Space Refurbishment</h4>
+          <ul>
+            <li>Internal reconfiguration</li>
+            <li>Ceiling and finishes works</li>
+            <li>Executed within active office</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/reno2.jpg" alt="">
+        <div class="project-details">
+          <h4>Commercial Interior Upgrade</h4>
+          <ul>
+            <li>Flooring and wall finishes</li>
+            <li>Electrical and lighting upgrades</li>
+            <li>Compliance improvements</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/reno3.jpg" alt="">
+        <div class="project-details">
+          <h4>Residential Kitchen Renovation</h4>
+          <ul>
+            <li>Cabinetry and fittings</li>
+            <li>Plumbing and tiling works</li>
+            <li>Functional layout upgrade</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/reno4.jpg" alt="">
+        <div class="project-details">
+          <h4>Office Fit-Out & Partitioning</h4>
+          <ul>
+            <li>Drywall partitioning</li>
+            <li>Workspace optimisation</li>
+            <li>Fast-track delivery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/reno5.jpg" alt="">
+        <div class="project-details">
+          <h4>Retail Space Refurbishment</h4>
+          <ul>
+            <li>Interior remodelling</li>
+            <li>Flooring and display works</li>
+            <li>Operational handover</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/reno6.jpg" alt="">
+        <div class="project-details">
+          <h4>Apartment Interior Renovation</h4>
+          <ul>
+            <li>Living and bedroom upgrades</li>
+            <li>Ceiling and paint works</li>
+            <li>Finishes replacement</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="container stats-grid">
+    <div class="stat-item"><span class="stat-number" data-target="250">0</span><span class="plus">+</span><p>Projects</p></div>
+    <div class="stat-item"><span class="stat-number" data-target="100">0</span><span class="plus">+</span><p>Clients</p></div>
+    <div class="stat-item"><span class="stat-number" data-target="25">0</span><span class="plus">+</span><p>Specialists</p></div>
+    <div class="stat-item"><span class="stat-number" data-target="10">0</span><span class="plus">+</span><p>Awards</p></div>
+  </div>
+</section>
+
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container footer-grid">
     <div>
@@ -174,33 +238,24 @@
         Building quality homes, renovations, and infrastructure across Nairobi and beyond.
       </div>
     </div>
-    <div style="flex:1">
-      <h4 style="margin-top:0">Navigate</h4>
-      <nav aria-label="Footer nav">
-        <a href="index.html">Home</a> • 
-        <a href="services.html">Services</a> • 
-        <a href="projects.html">Projects</a>
-      </nav>
+
+    <div>
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a> •
+      <a href="services.html">Services</a> •
+      <a href="projects.html">Projects</a>
     </div>
-    <div style="width:260px">
-      <h4 style="margin-top:0">Contact</h4>
+
+    <div>
+      <h4>Contact</h4>
       <div>P.O. Box 65188-00618<br>Ruaraka, Nairobi</div>
-      <div style="margin-top:6px">
-        Phone:
-        <a href="tel:+254722141595">+254 722 141595</a> /
-        <a href="tel:+254754126129">+254 754 126129</a> /
-        <a href="tel:+254735424187">+254 735 424187</a>
-      </div>
-      <div style="margin-top:6px">
-        Email:
-        <div style="margin-top:6px">
-          <a href="mailto:goodlifenterprises@yahoo.com">goodlifenterprises@yahoo.com</a><br>
-          <a href="mailto:goodlifeenterprises05@gmail.com">goodlifeenterprises05@gmail.com</a>
-        </div>
-      </div>
+      <a href="tel:+254722141595">+254 722 141595</a><br>
+      <a href="tel:+254754126129">+254 754 126129</a><br>
+      <a href="tel:+254735424187">+254 735 424187</a>
     </div>
   </div>
-  <div style="text-align:center;padding:12px 0;border-top:1px solid rgba(255,255,255,0.06);opacity:0.9">
+
+  <div style="text-align:center;padding:12px 0;opacity:0.9">
     © Goodlife Enterprises Ltd. All rights reserved.
   </div>
 </footer>

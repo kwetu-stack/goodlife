@@ -5,125 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects — Goodlife Enterprises Ltd</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Main Styles -->
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* Fade-in animation */
-    .projects-grid {
-      animation: fadeIn 0.8s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Projects layout */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
       margin-top: 30px;
     }
-    .project {
-      cursor: pointer;
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(11,37,64,0.08);
       overflow: hidden;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(11,37,64,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(11,37,64,0.12);
-    }
-    .project img {
-      width: 100%;
-      border-radius: 12px 12px 0 0;
-    }
-    .project .meta {
-      padding: 12px 16px;
-      font-weight: 600;
-      color: #0b2540;
-      background: #f8f8f8;
-      border-radius: 0 0 12px 12px;
     }
 
-    /* Modal overlay */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
+    .project-card img {
       width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      padding-top: 60px;
-    }
-    .modal-content {
-      background: #fff;
-      margin: auto;
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 600px;
-      text-align: center;
-      position: relative;
-      animation: fadeIn 0.3s ease;
-    }
-    .modal-content img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .modal-content h3 {
-      color: #0b2540;
-      margin-top: 5px;
-    }
-    .close {
-      position: absolute;
-      top: 8px;
-      right: 14px;
-      font-size: 28px;
-      color: #333;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .close:hover {
-      color: #d19f00;
+      height: 200px;
+      object-fit: cover;
     }
 
-    /* Stats section */
+    .project-body {
+      padding: 16px 18px 20px;
+    }
+
+    .project-body h3 {
+      margin: 0 0 8px;
+      color: #0b2540;
+    }
+
+    .project-body ul {
+      padding-left: 18px;
+      margin: 8px 0 0;
+      font-size: 0.95rem;
+    }
+
+    .project-body li {
+      margin-bottom: 6px;
+    }
+
     .stats {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 40px;
+      gap: 50px;
       background: #0b2540;
       color: #fff;
       padding: 60px 20px;
+      margin-top: 70px;
       flex-wrap: wrap;
     }
+
     .stat {
       text-align: center;
     }
+
     .stat h3 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin: 0;
       color: #d19f00;
     }
+
     .stat p {
       margin-top: 6px;
-      font-size: 1.1rem;
       opacity: 0.9;
     }
   </style>
 </head>
 
 <body>
+
 <header>
   <div class="container nav">
     <div class="brand">
@@ -136,8 +90,7 @@
       </div>
     </div>
 
-    <nav aria-label="Main navigation">
-      <button class="mobile-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <nav>
       <ul id="main-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -148,191 +101,186 @@
       </ul>
     </nav>
 
-    <div><a class="cta-primary" href="contact.html">Get a Quote</a></div>
+    <a class="cta-primary" href="contact.html">Get a Quote</a>
   </div>
 </header>
 
-<!-- Hero Section -->
 <section class="page-hero" style="background-image:url('assets/background4.jpg')">
   <div class="overlay"></div>
   <div class="hero-text">
-    <h1>Projects</h1>
+    <h1>Project Experience</h1>
+    <p>Residential, commercial, and civil works delivered across diverse environments.</p>
   </div>
 </section>
 
-<main>
-  <section class="container">
-    <div class="section-title">
-      <div class="eyebrow">PROJECTS</div>
-      <h2 class="h2">Selected Works</h2>
+<main class="container">
+
+  <div class="projects-grid">
+
+    <!-- RESIDENTIAL -->
+    <div class="project-card">
+      <img src="assets/project1.png">
+      <div class="project-body">
+        <h3>Residential Housing Estate</h3>
+        <ul>
+          <li>Multi-unit housing development</li>
+          <li>Structural works and finishes</li>
+          <li>Internal roads and drainage</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="projects-grid">
-      <article class="project" onclick="openModal('modal1')">
-        <img src="assets/project1.png" alt="Residential Estate">
-        <div class="meta">Residential Estate — Nairobi</div>
-      </article>
-      <article class="project" onclick="openModal('modal2')">
-        <img src="assets/project2.png" alt="Office Complex">
-        <div class="meta">Office Complex — Westlands</div>
-      </article>
-      <article class="project" onclick="openModal('modal3')">
-        <img src="assets/project3.png" alt="Road Rehabilitation">
-        <div class="meta">Road Rehabilitation — County Works</div>
-      </article>
+    <div class="project-card">
+      <img src="assets/projectA.png">
+      <div class="project-body">
+        <h3>Private Residential Renovation</h3>
+        <ul>
+          <li>Interior reconfiguration</li>
+          <li>Kitchen and bathroom upgrades</li>
+          <li>Finishes replacement</li>
+        </ul>
+      </div>
     </div>
 
-    <div style="margin-top:30px">
-      <h3>Residential Estate</h3>
-      <p>Construction of a 20-unit modern housing estate featuring energy-efficient design, quality finishes, and secure perimeter works.</p>
-
-      <h3>Office Complex</h3>
-      <p>Design and build of a three-storey office complex with parking, reinforced structural works, and modern façades.</p>
-
-      <h3>Road Rehabilitation</h3>
-      <p>County road resurfacing including drainage upgrades, earthworks, and traffic management coordination.</p>
+    <div class="project-card">
+      <img src="assets/projectB.png">
+      <div class="project-body">
+        <h3>Apartment Refurbishment</h3>
+        <ul>
+          <li>Occupied-building renovations</li>
+          <li>Minimal disruption works</li>
+          <li>Modern finishes</li>
+        </ul>
+      </div>
     </div>
-  </section>
+
+    <!-- COMMERCIAL -->
+    <div class="project-card">
+      <img src="assets/projectC.png">
+      <div class="project-body">
+        <h3>Commercial Office Complex</h3>
+        <ul>
+          <li>Reinforced concrete structure</li>
+          <li>Office layouts and façades</li>
+          <li>Parking and services</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/projectD.png">
+      <div class="project-body">
+        <h3>Office Fit-Out</h3>
+        <ul>
+          <li>Partitioning and layouts</li>
+          <li>Electrical & mechanical works</li>
+          <li>Fast-track delivery</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/projectF.png">
+      <div class="project-body">
+        <h3>Retail Space Renovation</h3>
+        <ul>
+          <li>Interior refurbishment</li>
+          <li>Flooring and finishes</li>
+          <li>Operational handover</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CIVIL -->
+    <div class="project-card">
+      <img src="assets/projectG.png">
+      <div class="project-body">
+        <h3>Road Rehabilitation</h3>
+        <ul>
+          <li>Grading and resurfacing</li>
+          <li>Earthworks and compaction</li>
+          <li>Traffic safety management</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/projectH.png">
+      <div class="project-body">
+        <h3>Drainage & Culvert Works</h3>
+        <ul>
+          <li>Stormwater drainage systems</li>
+          <li>Culvert installation</li>
+          <li>Flood risk reduction</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/projectI.png">
+      <div class="project-body">
+        <h3>Flood Damage Repairs</h3>
+        <ul>
+          <li>Emergency response works</li>
+          <li>Channel clearing</li>
+          <li>Post-flood reinstatement</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </main>
 
-<!-- Stats Section -->
 <section class="stats">
-  <div class="stat">
-    <h3 class="count" data-target="250">0</h3>
-    <p>Projects</p>
-  </div>
-  <div class="stat">
-    <h3 class="count" data-target="100">0</h3>
-    <p>Clients</p>
-  </div>
-  <div class="stat">
-    <h3 class="count" data-target="25">0</h3>
-    <p>Specialists</p>
-  </div>
-  <div class="stat">
-    <h3 class="count" data-target="10">0</h3>
-    <p>Awards</p>
-  </div>
+  <div class="stat"><h3 class="count" data-target="250">0</h3><p>Projects</p></div>
+  <div class="stat"><h3 class="count" data-target="100">0</h3><p>Clients</p></div>
+  <div class="stat"><h3 class="count" data-target="25">0</h3><p>Specialists</p></div>
+  <div class="stat"><h3 class="count" data-target="10">0</h3><p>Awards</p></div>
 </section>
-
-<!-- Project Modals -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
-    <img src="assets/project1.png" alt="">
-    <h3>Residential Estate — Nairobi</h3>
-    <p>Construction of a 20-unit modern housing estate featuring energy-efficient design, quality finishes, and secure perimeter works.</p>
-  </div>
-</div>
-
-<div id="modal2" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
-    <img src="assets/project2.png" alt="">
-    <h3>Office Complex — Westlands</h3>
-    <p>Design and build of a three-storey office complex with parking, reinforced structural works, and modern façades.</p>
-  </div>
-</div>
-
-<div id="modal3" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal3')">&times;</span>
-    <img src="assets/project3.png" alt="">
-    <h3>Road Rehabilitation — County Works</h3>
-    <p>Upgrading and resurfacing of county access roads including drainage systems and safety installations.</p>
-  </div>
-</div>
 
 <footer>
   <div class="container footer-grid">
     <div>
       <div class="logo" style="color:#fff">GOODLIFE</div>
-      <div style="opacity:0.85;margin-top:8px;max-width:340px">
+      <div style="opacity:0.85;margin-top:8px">
         Building quality homes and infrastructure across Nairobi and beyond.
       </div>
     </div>
-    <div style="flex:1">
-      <h4 style="margin-top:0">Navigate</h4>
-      <nav aria-label="Footer nav">
-        <a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="projects.html">Projects</a>
-      </nav>
-    </div>
-    <div style="width:260px">
-      <h4 style="margin-top:0">Contact</h4>
+    <div>
+      <h4>Contact</h4>
       <div>P.O. Box 65188-00618<br>Ruaraka, Nairobi</div>
-      <div style="margin-top:6px">
-        Phone:
-        <a href="tel:+254722141595">+254 722 141595</a> /
-        <a href="tel:+254754126129">+254 754 126129</a> /
-        <a href="tel:+254735424187">+254 735 424187</a>
-      </div>
-      <div style="margin-top:6px">
-        Email:
-        <div style="margin-top:6px">
-          <a href="mailto:goodlifenterprises@yahoo.com">goodlifenterprises@yahoo.com</a><br>
-          <a href="mailto:goodlifeenterprises05@gmail.com">goodlifeenterprises05@gmail.com</a>
-        </div>
-      </div>
+      <a href="tel:+254722141595">+254 722 141595</a><br>
+      <a href="tel:+254754126129">+254 754 126129</a><br>
+      <a href="tel:+254735424187">+254 735 424187</a>
     </div>
   </div>
-  <div style="text-align:center;padding:12px 0;border-top:1px solid rgba(255,255,255,0.06);opacity:0.9">
+
+  <div style="text-align:center;padding:12px 0;opacity:0.9">
     © Goodlife Enterprises Ltd. All rights reserved.
   </div>
 </footer>
 
 <script>
-/* ===== Modal handlers ===== */
-function openModal(id) {
-  const el = document.getElementById(id);
-  if (el) el.style.display = "block";
-}
-function closeModal(id) {
-  const el = document.getElementById(id);
-  if (el) el.style.display = "none";
-}
-window.addEventListener('click', (event) => {
-  document.querySelectorAll('.modal').forEach(m => {
-    if (event.target === m) m.style.display = "none";
-  });
-});
-
-/* ===== Counter Animation ===== */
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count");
-  if (!counters.length) return;
-
-  const animateCounter = (counter) => {
-    const target = Math.max(0, parseInt(counter.getAttribute("data-target"), 10) || 0);
-    const duration = 1400;
-    const stepTime = 20;
-    const steps = Math.max(1, Math.floor(duration / stepTime));
-    const increment = target / steps;
+  counters.forEach(counter => {
+    const target = parseInt(counter.dataset.target, 10);
     let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        counter.textContent = target + "+";
-        clearInterval(timer);
+    const step = Math.max(1, Math.floor(target / 120));
+
+    const update = () => {
+      current += step;
+      if (current < target) {
+        counter.textContent = current;
+        requestAnimationFrame(update);
       } else {
-        counter.textContent = Math.floor(current);
+        counter.textContent = target + "+";
       }
-    }, stepTime);
-  };
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        counters.forEach(c => animateCounter(c));
-        obs.disconnect();
-      }
-    });
-  }, { threshold: 0.35 });
-
-  const statsSection = document.querySelector(".stats");
-  if (statsSection) observer.observe(statsSection);
+    };
+    update();
+  });
 });
 </script>
 
-<script src="scripts.js"></script>
 </body>
 </html>
