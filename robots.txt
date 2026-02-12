@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://goodlifeenterprisesltd.cloud/sitemap.xml
